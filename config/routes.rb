@@ -10,7 +10,9 @@ end
     resource :relationships, only: [:create, :destroy]
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
-  end
+    get '/search', to: 'searches#search'
+    get 'searches/search'
+    end
   
   root 'homes#top'
   get 'home/about' => 'homes#about', as: 'about'
